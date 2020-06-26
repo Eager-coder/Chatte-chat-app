@@ -29,7 +29,7 @@ const expressLayouts = require('express-ejs-layouts')
 app.use(expressLayouts)
 
 // DB config
-const db = 'mongodb+srv://taskapp:myaccount007@cluster0.jpyir.mongodb.net/chatUsers?retryWrites=true&w=majority'
+const db = process.env.MONGO_URI
 
 //Connect to Mongo
 mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true})
