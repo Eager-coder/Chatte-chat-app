@@ -68,13 +68,24 @@ const messageContainer = document.querySelector('.message-container')
 const messageInput = document.querySelector('#message-input')
 const messageBtn = document.querySelector('#send-btn')
 messageBtn.addEventListener('click', () => {
-    if (messageInput.value != '') {
-        const sendingMessage = messageInput.value
-        const div = document.createElement('div')
-        div.className = 'message'
-        div.innerText = sendingMessage
-        messageContainer.appendChild(div)
-        socket.emit('sendMessage', sendingMessage)
-        messageInput.value = ''
+    if (messageInput.value.trim() !== '') {
+        addMessage()
     }
 })
+input.addEventListener('keypress', (e) => {
+    if (e.key == "Enter") {
+        if (input.value.trim() !== '') {
+            addMessage()
+        }
+    }
+})
+
+const addMessage = () => {
+    const sendingMessage = messageInput.value
+    const div = document.createElement('div')
+    div.className = 'message'
+    div.innerText = sendingMessage
+    messageContainer.appendChild(div)
+    socket.emit('sendMessage', sendingMessage)
+    messageInput.value = ''
+}
