@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/style/register.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Chatte</a>
+
+
+        </nav>
+    </header>
+    <div class="register">
+        <form action="/account/register" method="POST">
+            <h3>Create account</h3>
+            <div class="name">
+                <input type="text" id="username" name="username" placeholder="Username" required
+                    value="<%= locals.username != '' ? locals.username : '' %>">
+                <span></span>
+            </div>
+
+            <div class="email">
+                <input type="email" id="email" name="email" placeholder="Email" required
+                    value="<%= locals.email != 'undefined' ? locals.email : '' %>">
+                <span></span>
+            </div>
+
+            <div class="password">
+                <input type="password" id="password" name="password" placeholder="Password" required
+                    value="<%= locals.password != 'undefined' ? locals.password : '' %>">
+                <span></span>
+            </div>
+
+            <div class="confirm">
+                <input type="password" id="password2" name="password2" placeholder="Confirm password" required>
+                <span></span>
+            </div>
+            <%- include('partials/messages'); -%>
+            <button type="submit">Register</button>
+            <p>Have an account? <a href="/account/login">Login</a></p>
+        </form>
+        <img src="/images/register.jpg" alt="">
+
+    </div>
+
+</body>
+
+</html>

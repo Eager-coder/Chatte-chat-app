@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/style/login.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Chatte</a>
+        </nav>
+    </header>
+    <div class="login">
+
+        <img src="/images/login.jpg" alt="">
+        <form action="/account/login" method="POST">
+            <h3>Log in</h3>
+            <div class="email">
+                <input type="text" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="password">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+            <%- include('partials/messages'); -%>
+            <p>Not registered yet? <a href="/account/register">Register</a></p>
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat app</title>
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Chatte</a>
+            <div class="links">
+                <a href="/account/logout">Log out</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="sidebar">
+            <!-- <form action="/main/upload_avatar" method="POST">
+                <span>Upload a profile picture</span>
+                <input type="file" id="change-avatar" name="change-avatar" class="filepond">
+                <button type="submit">Upload</button>
+            </form> -->
+            <div class="user-data">
+                <img id="user-avatar" src="<%=avatar%>" alt />
+                <span> <%=username == 'Bedel' ? 'Welcome, ' + username + '. Happy birthday!!!' : username%></span>
+            </div>
+
+            <div class="search-container">
+                <input type="text" name="searchName" id="searchName" placeholder="Search people to chat">
+                <!-- <button id="search-name-btn">Find</button> -->
+                <div class="user-container"></div>
+            </div>
+        </section>
+
+        <section class="chat">
+
+            <div class="message-container"></div>
+
+            <div class="input-holder">
+                <input type="text" id="message-input" placeholder="Message...">
+                <button id="send-btn">Send</button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

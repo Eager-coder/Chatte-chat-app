@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import 'common';
+body{
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+h3{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(73, 73, 73);
+
+}
+.login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+    padding: 0 30px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 1px 1px 4px 5px rgba(133, 133, 133, 0.1);
+}
+form{
+    max-width: 350px;
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 30px;
+    div{
+        width: 100%;
+        input{
+            width: 100%;
+            height: 35px;
+            border: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+            font-size: 0.9rem;
+            padding: 0 10px;
+        }
+        span{
+            font-size: 0.8rem;
+            color: crimson;
+        }
+    }
+    p{
+        color: rgb(63, 63, 63);
+        font-size: 0.9rem;
+        a{
+            margin-left: 10px;
+            text-decoration: none;
+            color: #f18c8c;
+            font-weight: 600;
+            border-bottom: 2px solid #f18c8c;
+        }
+    }
+    button{
+        width: 150px;
+        height: 40px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        background-color: rgba(240, 128, 128, 0.9);
+        color: white;
+        align-self: center;
+        &:hover{
+            background-color: coral;
+        }
+    }
+    
+
+}
+img{
+    height: 400px;
+}
+@media screen and (max-width: 1000px){
+    body{
+        background-color: white;
+        height: max-content;
+    }
+    .login{
+        margin: 50px auto;
+        display: block;
+        border: none;
+        box-shadow: none;
+        form{
+            width: 100%;
+            margin:0 auto;
+            background: white;
+        }
+        img{
+            display: none;
+        }
+    }
+}

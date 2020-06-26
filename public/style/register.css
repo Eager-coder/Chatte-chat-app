@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+}
+
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  width: 100%;
+  max-width: 1200px;
+  height: 4rem;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+header nav .logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  padding: 0 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: #007cff;
+}
+
+header nav .links a {
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+header nav .links a:hover {
+  border-bottom: 2px black solid;
+}
+
+body {
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #494949;
+}
+
+.register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  max-width: 800px;
+  margin: 60px auto 0 auto;
+  padding: 0 30px;
+  background-color: white;
+  border-radius: 7px;
+  -webkit-box-shadow: 1px 1px 4px 5px rgba(133, 133, 133, 0.1);
+          box-shadow: 1px 1px 4px 5px rgba(133, 133, 133, 0.1);
+}
+
+form {
+  max-width: 350px;
+  width: 50%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 50px 30px;
+}
+
+form div {
+  width: 100%;
+}
+
+form div input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+
+form div span {
+  font-size: 0.8rem;
+  color: crimson;
+}
+
+form p {
+  color: #3f3f3f;
+  font-size: 0.9rem;
+}
+
+form p a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #f18c8c;
+  font-weight: 600;
+  border-bottom: 2px solid #f18c8c;
+}
+
+form button {
+  width: 150px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(240, 128, 128, 0.9);
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+form button:hover {
+  background-color: coral;
+}
+
+img {
+  height: 400px;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: white;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .register {
+    margin: 50px auto;
+    display: block;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: none;
+  }
+  .register form {
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+  }
+  .register img {
+    display: none;
+  }
+}
+/*# sourceMappingURL=register.css.map */
