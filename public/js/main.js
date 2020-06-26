@@ -74,7 +74,7 @@ messageBtn.addEventListener('click', () => {
 })
 messageInput.addEventListener('keypress', (e) => {
     if (e.key == "Enter") {
-        if (input.value.trim() !== '') {
+        if (messageInput.value.trim() !== '') {
             addMessage()
         }
     }
